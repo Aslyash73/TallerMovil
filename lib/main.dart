@@ -11,13 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Componentes app',
-      // home: HomePage()
-      //ruta principal
+      title: 'Vistas',
       initialRoute: "home",
-      //cambios
       routes: AppRoutes.getAppRoutes(),
-      //404 pagina
       onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }

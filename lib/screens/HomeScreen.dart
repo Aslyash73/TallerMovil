@@ -19,19 +19,20 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'Hola Asly!',
-            style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.network(
+              'https://www.wallpaperup.com/uploads/wallpapers/2018/05/08/1266168/7c5fe81643e6887b3fbc433a2f7da499-700.jpg',
+              width: 500,
+              height: 400,
             ),
-          ),
-          const SizedBox(height: 20.0),
-          Expanded(
-            child: ListView.separated(
+            const SizedBox(height: 20.0),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               itemCount: AppRoutes.menuOptions.length,
               separatorBuilder: (context, index) => const Divider(),
               itemBuilder: (context, index) {
@@ -70,8 +71,21 @@ class HomeScreen extends StatelessWidget {
                 }
               },
             ),
-          ),
-        ],
+            Container(
+              color: Color.fromARGB(255, 249, 48, 34),
+              height: 60.0,
+              child: const Center(
+                child: Text(
+                  "MY-APP",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
