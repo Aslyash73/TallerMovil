@@ -37,15 +37,14 @@ class CustomInputField extends StatelessWidget {
         formValues[formProperty] = value;
       },
       validator: (value) {
-        if (value == null) return "Este campo es requerido";
-        return value.length < 1 ? 'Minimo 1 letra' : null;
+        if (value == null) return "Este campo es obligatorio";
+        return value.length < 1 ? 'Minimo 1 letra porfavor' : null;
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
           hintText: hintText,
           labelText: labelText,
           helperText: helperText,
-          // couter: 'Cuanto falta 3',
           suffixIcon: Icon(sufIcon)),
     );
   }

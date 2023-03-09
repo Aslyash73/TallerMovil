@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movilapp/widgets/inputs/CustomInputField.dart';
+import 'package:movilapp/widgets/inputs/CustomInput.dart';
 
 class ViewOneScreen extends StatelessWidget {
   const ViewOneScreen({Key? key}) : super(key: key);

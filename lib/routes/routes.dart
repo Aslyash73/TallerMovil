@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movilapp/models/menu_option.dart';
+import 'package:movilapp/modelsOption/menu_option.dart';
 import 'package:movilapp/screens/screens.dart';
 
 class AppRoutes {
