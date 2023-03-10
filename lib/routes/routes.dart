@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movilapp/modelsOption/menu_option.dart';
-import 'package:movilapp/screens/screens.dart';
+import 'package:movilapp/screensViews/screens.dart';
 
 class AppRoutes {
   static const initialRoute = "Home";

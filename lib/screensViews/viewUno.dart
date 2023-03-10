@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:movilapp/widgets/inputs/CustomInput.dart';
 
-class ViewSecondScreen extends StatelessWidget {
-  const ViewSecondScreen({Key? key}) : super(key: key);
+class ViewOneScreen extends StatelessWidget {
+  const ViewOneScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final GlobalKey<FormState> myFormKey = GlobalKey<FormState>();
 
     final Map<String, String> formValues = {
-      'nombre y apellido': '',
-      'horas': '',
-      'valor': '',
+      'Peso': '',
+      'Altura': '',
     };
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: const Text("APP-SUELDO"),
+        title: const Text("IMCAP❤️"),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -60,50 +59,43 @@ class _formImcapp extends StatelessWidget {
             height: 50,
           ),
           CustomInputField(
-            textType: TextInputType.text,
-            formProperty: "nombre y apellido",
+            textType: TextInputType.number,
+            formProperty: "peso",
             autofocus: true,
             formValues: formValues,
-            labelText: "Nombre Empleado",
+            labelText: "Peso (KG)",
           ),
           const SizedBox(
-            height: 32,
+            height: 50,
           ),
           CustomInputField(
             textType: TextInputType.number,
-            formProperty: "horas",
+            formProperty: "altura",
             formValues: formValues,
-            labelText: "Horas Trabajadas",
-          ),
-          const SizedBox(
-            height: 32,
-          ),
-          CustomInputField(
-            textType: TextInputType.number,
-            formProperty: "horas",
-            formValues: formValues,
-            labelText: "Valor Hora",
+            labelText: "Altura (mts)",
           ),
           const SizedBox(
             height: 50,
           ),
           ElevatedButton(
-              onPressed: () {
-                print(formValues);
-                if (!myFormKey.currentState!.validate()) {
-                  return;
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
-                  shape: const StadiumBorder(),
-                  elevation: 0),
-              child: const SizedBox(
-                width: double.infinity,
-                child: Center(
-                  child: Text("Enviar"),
-                ),
-              ))
+            onPressed: () {
+              print(formValues);
+              if (!myFormKey.currentState!.validate()) {
+                return;
+              }
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.red,
+              shape: const StadiumBorder(),
+              elevation: 0,
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            ),
+            child: const Center(
+              heightFactor: 1,
+              widthFactor: 1,
+              child: Text("Enviar", style: TextStyle(fontSize: 18)),
+            ),
+          )
         ],
       ),
     );
@@ -117,11 +109,11 @@ class _TitleCard extends StatelessWidget {
       child: Column(
         children: const [
           Text(
-            "APP-SUELDO",
+            "IMCAPP",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           Text(
-            "Calculo Sueldo😎",
+            "Vida Saludabe",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           )
         ],

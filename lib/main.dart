@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movilapp/routes/routes.dart';
-import 'package:movilapp/screens/screens.dart';
+import 'package:movilapp/screensViews/screens.dart';
 
 void main() => runApp(const MyApp());
 
